@@ -26,3 +26,18 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 "# CRUDApp" 
+
+Feature List:
+      1. Datatable Implemented
+      2. Add Record Implemented
+      3. Edit Record Implemented
+      4. Delete Record Implemented
+      5. Sorting added to the grid
+            How to use: Click on the header to sort.
+      6. Searching added to the grid
+      7. Export to Excel and CSV, Copy to clipboard, print grid Implemented
+      8. Pagination Implemented
+      9. Formatting Implemented.
+            How to use: pass format:'amount/text/number' in the column object of the component options.
+      10. Callback events execution implemented
+      11. Routing Implemented
