@@ -1,0 +1,28 @@
+<div *ngIf="showAlert" class="alert alert-info alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Info!</strong> {{alertMessage}}
+  </div>
+<div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+        <h2>{{mode}} Item</h2>
+        <form [formGroup]="itemForm" (submit)="onSubmit()" *ngIf="itemForm">
+            <div class="row" *ngFor="let column of columns">
+                <div class="col-sm-6">                    
+                    <div class="form-group">
+                        <label [for]="column.data">{{column.name}}</label>
+                        <input class="form-control" [id]="column.data" [formControlName]="column.data">
+                    </div>
+                    <!-- <p>{{getData(column.data)}}</p> -->
+                    <p class="text-danger" *ngIf="formControls[column.data].touched && formControls[column.data].errors && formControls[column.data].errors.required">
+                         Please Enter {{column.name}}</p>
+                </div>
+            </div>            
+            <div class="row">
+                <div class="col-sm-6">
+                    <button class="btn btn-success" [disabled]="!itemForm.valid" type="submit">Save</button>
+                    <button class="btn btn-danger btn-space" type="button" (click)="onCancel()">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

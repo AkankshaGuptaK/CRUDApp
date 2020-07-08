@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.btn-space{
+    margin-left: 10px;
+}
+
+.no-margin{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+input.ng-dirty.ng-invalid{
+    border: 1px solid red;
+}
